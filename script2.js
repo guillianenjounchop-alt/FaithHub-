@@ -12,7 +12,7 @@ const VIDEOS = [
     id: 1,
     title: "3 Forms of Proteins Explained",
     src: "Screen_Recording_20260626_193735.mp4",
-    poster: "thumbnail/Screenshot_20260630-191456.jpg",
+    poster: "Screenshot_20260630-191456.jpg",
     views: 1200,
     likes: 320,
     dislikes: 12

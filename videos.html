@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FaithTube</title>
+<link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+<header>
+  <div class="top-row">
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </button>
+    <div class="logo">Faith<span>Tube</span></div>
+    <div class="avatar"></div>
+  </div>
+
+  <div class="search-wrap">
+    <div class="search">
+      <input id="searchInput" placeholder="Search" autocomplete="off">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="suggestions" id="suggestions"></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside id="sidebar">
+    <a href="#"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span>Home</span></a>
+    <a href="#"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg><span>Explore</span></a>
+    <a href="#"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>Library</span></a>
+  </aside>
+
+  <main>
+    <div class="video-area">
+      <div class="video-controls-top"> <!-- NEW: Button group -->
+        <button class="icon-btn" id="backBtn" aria-label="Back" title="Back">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        </button>
+        <button class="icon-btn" id="fsBtn" aria-label="Fullscreen" title="Fullscreen"> <!-- NEW -->
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+        </button>
+      </div>
+
+      <div class="player" id="playerWrap"> <!-- Added id for fullscreen target -->
+        <video id="mainVideo" controls poster="thumbnails/proteins.jpg">
+          <source src="videos/proteins.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="video-info">
+        <h1 id="videoTitle">My First Video - Food Science Explained</h1>
+        <div class="meta">
+          <span id="views">1.2K views • 2 days ago</span>
+          <div class="actions">
+            <button class="btn" id="likeBtn">👍 <span id="likeCount"></span></button>
+            <button class="btn" id="dislikeBtn">👎 <span id="dislikeCount"></span></button>
+            <button class="btn">Share</button>
+            <button class="btn subscribe" id="subBtn">Subscribe</button>
+          </div>
+        </div>
+        <div class="desc collapsed" id="desc">
+          <b>FaithHub Food Science</b><br><br>
+          Welcome! In this video we break down the 3 forms of proteins.
+          <br><br>#foodscience #cooking #proteins
+        </div>
+      </div>
+
+      <div class="comments">
+        <h3 id="commentCount">0 Comments</h3>
+        <div class="comment-box"><img src="https://picsum.photos/32?1" alt=""><input id="commentInput" placeholder="Add a comment..."></div>
+        <div id="commentList"></div>
+      </div>
+    </div>
+
+    <div class="side" id="upNext"></div>
+  </main>
+</div>
+
+<footer>
+  © 2026 FaithTube. Built for FaithHub. | Privacy • Terms • About
+</footer>
+
+<script src="script2.js"></script>
+</body>
+</html>
